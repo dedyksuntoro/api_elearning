@@ -12,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $username = isset($_POST['username']) ? $_POST['username'] : '';
     $password = isset($_POST['password']) ? $_POST['password'] : '';
 	
-	$sql = "SELECT * FROM tbl_login WHERE username = '" . mysqli_real_escape_string($dbConn, $username) . "' AND password = '" . mysqli_real_escape_string($dbConn, urlencode(MD5($password,"1q2w3e4r5t6y"))) . "' LIMIT 1";
+	$sql = "SELECT * FROM tbl_login WHERE username = '" . mysqli_real_escape_string($dbConn, $username) . "' AND `password` = '" . mysqli_real_escape_string($dbConn, urlencode(MD5($password,"1q2w3e4r5t6y"))) . "' LIMIT 1";
 	
 	$result = dbQuery($sql);
 	
