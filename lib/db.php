@@ -5,7 +5,7 @@
 */
 	
 // $dbConn = mysqli_connect('localhost', 'mandalag', 'mandalaputra', 'mandalag_inventory') or die('MySQL connect failed. ' . mysqli_connect_error());
-$dbConn = mysqli_connect('localhost', 'root', '', 'db_elearning') or die('MySQL connect failed. ' . mysqli_connect_error());
+$dbConn = mysqli_connect('localhost', 'root', 'root', 'db_elearning') or die('MySQL connect failed. ' . mysqli_connect_error());
 
 function dbQuery($sql) {
 	global $dbConn;
